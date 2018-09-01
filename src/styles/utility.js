@@ -1,59 +1,57 @@
-import colors from './_colors';
-
 const obj = {};
 
 for (let i = 0; i < 100; i++) {
   obj['m' + i] = {
-    margin: i
+    margin: i,
   };
   obj['mt' + i] = {
-    marginTop: i
+    marginTop: i,
   };
   obj['mb' + i] = {
-    marginBottom: i
+    marginBottom: i,
   };
   obj['ml' + i] = {
-    marginLeft: i
+    marginLeft: i,
   };
   obj['mr' + i] = {
-    marginRight: i
+    marginRight: i,
   };
   obj['p' + i] = {
-    padding: i
+    padding: i,
   };
   obj['pt' + i] = {
-    paddingTop: i
+    paddingTop: i,
   };
   obj['pb' + i] = {
-    paddingBottom: i
+    paddingBottom: i,
   };
   obj['pl' + i] = {
-    paddingLeft: i
+    paddingLeft: i,
   };
   obj['pr' + i] = {
-    paddingRight: i
+    paddingRight: i,
   };
 }
 
 export default {
   ...obj,
   overflowHidden: {
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
   absolute: {
     position: 'absolute',
     top: 0,
     left: 0,
     bottom: 0,
-    right: 0
+    right: 0,
   },
   textCenter: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   textLeft: {
-    textAlign: 'center'
+    textAlign: 'center',
   },
   textRight: {
-    textAlign: 'right'
-  }
+    textAlign: 'right',
+  },
 };
