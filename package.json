@@ -1,0 +1,25 @@
+{
+  "name": "react-native-enhanced-components",
+  "version": "0.1.0",
+  "description": "Enhanced React-Native components",
+  "main": "index.js",
+  "author": "Jaden Lemmon",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "react-native": "^0.50.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "react": "^16.4.2",
+    "react-native": "^0.56.0"
+  },
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^3.1.1",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1"
+  }
+}
