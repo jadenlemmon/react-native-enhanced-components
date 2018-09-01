@@ -1,40 +1,40 @@
-export const flex = {
+export default {
   flexRow: {
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   flexColumn: {
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   flexItem: {
-    flex: 1
+    flex: 1,
   },
   flexWrap: {
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
   },
   center: {
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   justifyCenter: {
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   spaceBetween: {
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   flexEnd: {
-    alignItems: 'flex-end'
+    alignItems: 'flex-end',
   },
   right: {
     alignItems: 'flex-end',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
   alignStart: {
-    alignSelf: 'flex-start'
+    alignSelf: 'flex-start',
   },
   alignEnd: {
-    alignSelf: 'flex-end'
+    alignSelf: 'flex-end',
   },
   alignCenter: {
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+  },
 };

@@ -1,5 +1,6 @@
-export * from "./components";
+import styles from 'app/styles';
+import withStyles from 'app/helpers/withStyles';
 
-import withStyles from "app/helpers";
+export * from './components';
 
-export withStyles;
+export { withStyles, styles };

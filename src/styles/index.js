@@ -1,11 +1,13 @@
 import { StyleSheet } from 'react-native';
 
-import { utility } from './_utility';
-import { flex } from './_flex';
+import utility from './utility';
+import flex from './flex';
+import text from './text';
 
 const styles = StyleSheet.create({
   ...utility,
-  ...flex
+  ...flex,
+  ...text,
 });
 
 export default styles;

@@ -2,17 +2,11 @@
   "name": "react-native-enhanced-components",
   "version": "0.1.0",
   "description": "Enhanced React-Native components",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": "Jaden Lemmon",
   "license": "MIT",
-  "peerDependencies": {
-    "react": "^16.2.0",
-    "react-native": "^0.50.0"
-  },
   "dependencies": {
-    "lodash": "^4.17.10",
-    "react": "^16.4.2",
-    "react-native": "^0.56.0"
+    "lodash": "^4.17.10"
   },
   "devDependencies": {
     "babel-plugin-module-resolver": "^3.1.1",

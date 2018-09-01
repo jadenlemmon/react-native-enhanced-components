@@ -35,7 +35,7 @@ for (let i = 0; i < 100; i++) {
   };
 }
 
-export const utility = {
+export default {
   ...obj,
   overflowHidden: {
     overflow: 'hidden'
