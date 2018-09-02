@@ -7,19 +7,20 @@ import gs from '../styles';
  * @param {*} props
  * @param {*} useValue
  */
-const mapStyle = (props, useValue) => Object.keys(props).map(key => (useValue ? gs[`${key}${props[key]}`] : gs[`${key}`]));
+const mapStyle = (props, useValue, fromStyles) => Object.keys(props).map(key => (useValue ? fromStyles[`${key}${props[key]}`] : fromStyles[`${key}`]));
 
 export default function withStyles(
   WrappedComponent,
   styles,
   useValues = false,
+  fromStyles = gs,
 ) {
   return class extends React.Component {
     getStyles() {
       // get other styles
       const otherStyles = get(this.props, 'style', {});
 
-      const grabbedStyles = mapStyle(pick(this.props, styles), useValues);
+      const grabbedStyles = mapStyle(pick(this.props, styles), useValues, fromStyles);
 
       // grab other styles
       const other = Array.isArray(otherStyles) ? otherStyles : [otherStyles];
