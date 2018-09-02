@@ -1,6 +1,6 @@
 import { View as RNView } from 'react-native';
-import withStyles from 'app/helpers/withStyles';
-import { flex } from 'app/styles/flex';
+import withStyles from '../helpers/withStyles';
+import flex from '../styles/flex';
 
 export default withStyles(
   withStyles(RNView, Object.keys(flex)),

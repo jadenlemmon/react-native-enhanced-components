@@ -1,5 +1,5 @@
-import styles from 'app/styles';
-import withStyles from 'app/helpers/withStyles';
+import styles from './styles';
+import withStyles from './helpers/withStyles';
 
 export * from './components';
 
