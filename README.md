@@ -8,7 +8,7 @@ Tired of adding the same basic styling to components over and over? React-native
 ### Basic Example
 Adding a margin top and overall padding of 5 to a view. The view component includes all flex styling below.
 
-````
+````javascript
 
 import { View } from 'react-native-enhanced-components'
 import { Text } from 'react-native'
@@ -21,7 +21,7 @@ import { Text } from 'react-native'
 
 ### Wrap your own component
 Wrapping the text component with some basic styling.
-````
+````javascript
 
 import { withStyles } from 'react-native-enhanced-components`
 import { Text as RNText, StyleSheet } from 'react-native'
@@ -47,7 +47,7 @@ const Text = withStyles(RNText, Object.keys(textStyles), false, textStyles);
 
 ### Using provided styles
 Using the provided basic stylesheet in the case you do not want to wrap.
-````
+````javascript
 import { styles } from 'react-native-enhanced-component'
 import { TouchableOpacity, Text } from 'react-native'
 
@@ -58,7 +58,7 @@ import { TouchableOpacity, Text } from 'react-native'
 
 ### Included Styles
 #### Flex
-````
+````javascript
 {
   flexRow: {
     flexDirection: 'row',
@@ -101,7 +101,7 @@ import { TouchableOpacity, Text } from 'react-native'
 };
 ````
 #### Text
-````
+````javascript
 {
   textCenter: {
     textAlign: 'center',
@@ -115,7 +115,7 @@ import { TouchableOpacity, Text } from 'react-native'
 };
 ````
 #### Utility
-````
+````javascript
 {
   overflowHidden: {
     overflow: 'hidden',
