@@ -5,6 +5,13 @@
   "main": "src/index.js",
   "author": "Jaden Lemmon",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix"
+  },
+  "pre-commit": [
+    "lint"
+  ],
   "dependencies": {
     "lodash": "^4.17.10",
     "react": "^16.4.2",
@@ -16,6 +23,7 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "pre-commit": "^1.2.2"
   }
 }
