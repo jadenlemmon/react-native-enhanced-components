@@ -23,7 +23,7 @@ import { Text } from 'react-native'
 Wrapping the text component with some basic styling.
 ````javascript
 
-import { withStyles } from 'react-native-enhanced-components`
+import { withStyles } from 'react-native-enhanced-components'
 import { Text as RNText, StyleSheet } from 'react-native'
 
 const textStyles = {
