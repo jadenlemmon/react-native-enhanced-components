@@ -26,7 +26,7 @@ export default function withStyles(
       const other = Array.isArray(otherStyles) ? otherStyles : [otherStyles];
 
       // merge all
-      return [...other, ...grabbedStyles];
+      return [...grabbedStyles, ...other];
     }
 
     render() {
