@@ -1,36 +1,32 @@
 import React from 'react';
 import { pick, get } from 'lodash';
-import gs from '../styles';
 
-/**
- * Map props to global styles. Use value uses value of prop
- * @param {*} props
- * @param {*} useValue
- */
-const mapStyle = (props, useValue, fromStyles) => Object.keys(props).map(key => (useValue ? fromStyles[`${key}${props[key]}`] : fromStyles[`${key}`]));
+const mapStyle = (props, styles) => Object.keys(props).map(key => styles[key]);
 
-export default function withStyles(
-  WrappedComponent,
-  styles,
-  useValues = false,
-  fromStyles = gs,
-) {
-  return class extends React.Component {
-    getStyles() {
-      // get other styles
-      const otherStyles = get(this.props, 'style', {});
+export default function withStyles(WrappedComponent, styles) {
+    return class extends React.Component {
+        get styles() {
+            const { props } = this;
 
-      const grabbedStyles = mapStyle(pick(this.props, styles), useValues, fromStyles);
+            // get other styles
+            const otherStyles = get(props, 'style', {});
 
-      // grab other styles
-      const other = Array.isArray(otherStyles) ? otherStyles : [otherStyles];
+            const grabbedStyles = mapStyle(
+                pick(props, Object.keys(styles)),
+                styles
+            );
 
-      // merge all
-      return [...grabbedStyles, ...other];
-    }
+            // grab other styles
+            const other = Array.isArray(otherStyles)
+                ? otherStyles
+                : [otherStyles];
 
-    render() {
-      return <WrappedComponent {...this.props} style={this.getStyles()} />;
-    }
-  };
+            // merge all
+            return [...grabbedStyles, ...other];
+        }
+
+        render() {
+            return <WrappedComponent {...this.props} style={this.styles} />;
+        }
+    };
 }

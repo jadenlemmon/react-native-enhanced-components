@@ -1,33 +1,39 @@
 {
-  "name": "react-native-enhanced-components",
-  "version": "0.2.2",
-  "description": "Enhanced React-Native components",
-  "main": "src/index.js",
-  "author": "Jaden Lemmon",
-  "license": "MIT",
-  "scripts": {
-    "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix"
-  },
-  "pre-commit": [
-    "lint"
-  ],
-  "dependencies": {
-    "lodash": "^4.17.10"
-  },
-  "devDependencies": {
-    "babel-plugin-module-resolver": "^3.1.1",
-    "eslint": "^5.5.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1",
-    "pre-commit": "^1.2.2",
-    "react": "^16.4.2",
-    "react-native": "^0.56.0"
-  },
-  "peerDependencies": {
-    "react": ">=16.4.1",
-    "react-native": ">=0.56.0"
-  }
+    "name": "react-native-enhanced-components",
+    "version": "0.2.2",
+    "description": "Enhanced React-Native components",
+    "main": "src/index.js",
+    "author": "Jaden Lemmon",
+    "license": "MIT",
+    "scripts": {
+        "lint": "eslint ./src",
+        "lint:fix": "eslint ./src --fix"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "pretty-quick --staged"
+        }
+    },
+    "dependencies": {
+        "lodash": "^4.17.10"
+    },
+    "devDependencies": {
+        "babel-plugin-module-resolver": "^3.1.1",
+        "docz": "^0.12.9",
+        "eslint": "^5.5.0",
+        "eslint-config-airbnb": "^17.1.0",
+        "eslint-plugin-import": "^2.14.0",
+        "eslint-plugin-jsx-a11y": "^6.1.1",
+        "eslint-plugin-prettier": "^3.0.0",
+        "eslint-plugin-react": "^7.11.1",
+        "husky": "^1.1.3",
+        "prettier": "1.14.3",
+        "pretty-quick": "^1.8.0",
+        "react": "^16.4.2",
+        "react-native": "^0.56.0"
+    },
+    "peerDependencies": {
+        "react": ">=16.4.1",
+        "react-native": ">=0.56.0"
+    }
 }
