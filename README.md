@@ -25,7 +25,7 @@ import { Block } from 'react-native-enhanced-components'
 import { Text } from 'react-native'
 
 <Block mt={5} p={5}>
-	<Text>Hello World</Text>
+	<Text>Hello World!</Text>
 </Block>
 ```
 
