@@ -1,13 +1,16 @@
 <div align="center">
 <h1>React-Native Enhanced Components</h1>
   <div>
-    <a href="https://www.npmjs.com/package/prettier">
+    <a href="https://www.npmjs.com/package/react-native-enhanced-components">
       <img alt="npm version" src="https://img.shields.io/npm/v/react-native-enhanced-components.svg?style=flat-square"></a>
-    <a href="https://www.npmjs.com/package/prettier">
+    <a href="https://www.npmjs.com/package/react-native-enhanced-components">
       <img alt="weekly downloads from npm" src="https://img.shields.io/npm/dw/react-native-enhanced-components.svg?style=flat-square"></a>
     <a href="#badge">
       <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square"></a>
+    <a href="#badge">
+      <img alt="Build Status" src="https://circleci.com/gh/jlemm45/react-native-enhanced-components/tree/master.svg?style=svg"></a>
   </div>
+  
 </div>
 
 `react-native-enhanced-components` provides a simple way to manage styling through your app. Out of the box several helpful higher order components are provided making it easy to apply basic layout styling to core or custom `react-native` components.
