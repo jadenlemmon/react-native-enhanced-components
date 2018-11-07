@@ -1,131 +1,76 @@
-# React-Native Enhanced Components
+<div align="center">
+<h1>React-Native Enhanced Components</h1>
+  <div>
+    <a href="https://www.npmjs.com/package/prettier">
+      <img alt="npm version" src="https://img.shields.io/npm/v/react-native-enhanced-components.svg?style=flat-square"></a>
+    <a href="https://www.npmjs.com/package/prettier">
+      <img alt="weekly downloads from npm" src="https://img.shields.io/npm/dw/react-native-enhanced-components.svg?style=flat-square"></a>
+    <a href="#badge">
+      <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square"></a>
+  </div>
+</div>
 
-Tired of adding the same basic styling to components over and over? React-native-enhanced-components wraps the `View` component out of the box with basic styles as well as exposes a `withStyles` helper function that can wrap any component you choose. Also a a stylesheet is exposed as styles with basic styles that can be applied in the case you do not want to wrap the component.
+`react-native-enhanced-components` provides a simple way to manage styling through your app. Out of the box several helpful higher order components are provided making it easy to apply basic layout styling to core or custom `react-native` components.
 
 ## Getting Started
+
 `yarn add react-native-enhanced-components` or `npm i react-native-enhanced-components`
 
 ### Basic Example
+
 Adding a margin top and overall padding of 5 to a view. The view component includes all flex styling below.
 
-````javascript
-
-import { View } from 'react-native-enhanced-components'
+```javascript
+import { Block } from 'react-native-enhanced-components'
 import { Text } from 'react-native'
 
-<View mt={5} p={5}>
+<Block mt={5} p={5}>
 	<Text>Hello World</Text>
-</View>
-
-````
+</Block>
+```
 
 ### Wrap your own component
-Wrapping the text component with some basic styling.
-````javascript
 
-import { withStyles } from 'react-native-enhanced-components'
-import { Text as RNText, StyleSheet } from 'react-native'
+Wrapping the text component with some basic styling.
+
+```javascript
+import { withStyles } from 'react-native-enhanced-components';
+import { Text as RNText, StyleSheet } from 'react-native';
 
 const textStyles = {
-	center: {
-    	textAlign: 'center',
-  	},
-  	body: {
-    	color: '#ccc',
-  	},
-  	light: {
-    	color: '#eee',
-  	},
-}
+  center: {
+    textAlign: 'center',
+  },
+  body: {
+    color: '#ccc',
+  },
+  light: {
+    color: '#eee',
+  },
+};
 
-const Text = withStyles(RNText, Object.keys(textStyles), false, textStyles);
+const Text = withStyles(RNText, textStyles);
 
 <View>
-	<Text white center>Hello World</Text>
-</View>
-````
+  <Text white center>
+    Hello World
+  </Text>
+</View>;
+```
 
-### Using provided styles
-Using the provided basic stylesheet in the case you do not want to wrap.
-````javascript
-import { styles } from 'react-native-enhanced-component'
+### Out of the box styles
+
+Several common styles are provided out of the box
+
+```javascript
+import { flexStyles } from 'react-native-enhanced-components'
 import { TouchableOpacity, Text } from 'react-native'
 
-<TouchableOpacity style={[styles.flexItem, styles.flexRow]}>
+<TouchableOpacity style={[flexStyles.flex, flexStyles.row]}>
 	<Text>Hey Hello</Text>
 </TouchableOpacity>
-````
+```
 
-### Included Styles
-#### Flex
-````javascript
-{
-  flexRow: {
-    flexDirection: 'row',
-  },
-  flexColumn: {
-    flexDirection: 'column',
-  },
-  flexItem: {
-    flex: 1,
-  },
-  flexWrap: {
-    flexWrap: 'wrap',
-  },
-  center: {
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  justifyCenter: {
-    justifyContent: 'center',
-  },
-  spaceBetween: {
-    justifyContent: 'space-between',
-  },
-  flexEnd: {
-    alignItems: 'flex-end',
-  },
-  right: {
-    alignItems: 'flex-end',
-    justifyContent: 'flex-end',
-  },
-  alignStart: {
-    alignSelf: 'flex-start',
-  },
-  alignEnd: {
-    alignSelf: 'flex-end',
-  },
-  alignCenter: {
-    alignItems: 'center',
-  },
-};
-````
-#### Text
-````javascript
-{
-  textCenter: {
-    textAlign: 'center',
-  },
-  textLeft: {
-    textAlign: 'center',
-  },
-  textRight: {
-    textAlign: 'right',
-  },
-};
-````
-#### Utility
-````javascript
-{
-  overflowHidden: {
-    overflow: 'hidden',
-  },
-  absolute: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
-  }
-}
-````
+### See all out of the box styles
+
+[See all out of the box styles](https://github.com/jlemm45/react-native-enhanced-components/tree/master/src/styles)

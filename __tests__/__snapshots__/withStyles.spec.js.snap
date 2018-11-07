@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should render component with backgroundColor 1`] = `
+<View
+  foo={true}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "tomato",
+      },
+      Object {},
+    ]
+  }
+/>
+`;
