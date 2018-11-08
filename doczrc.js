@@ -5,5 +5,5 @@ export default {
     mode: 'dark',
   },
   plugins: [reactNative()],
-  dest: '/docs/build',
+  dest: '/docs',
 };
