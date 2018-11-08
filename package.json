@@ -24,6 +24,8 @@
     "babel-jest": "^23.6.0",
     "babel-preset-react-native": "5.0.1",
     "docz": "^0.12.9",
+    "docz-plugin-react-native": "^0.11.2",
+    "docz-theme-default": "^0.12.9",
     "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
@@ -35,7 +37,8 @@
     "metro-react-native-babel-preset": "^0.49.0",
     "prettier": "1.14.3",
     "pretty-quick": "^1.8.0",
-    "react": "^16.4.2",
+    "react": "16.3.1",
+    "react-dom": "16.3.1",
     "react-native": "0.56.0",
     "react-test-renderer": "16.3.1",
     "regenerator-runtime": "^0.12.1"

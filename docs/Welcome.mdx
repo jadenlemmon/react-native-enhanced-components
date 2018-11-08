@@ -1,0 +1,95 @@
+---
+name: Welcome
+route: /
+---
+
+# Welcome
+
+This library aims to alleviate some of the styling problems involved with React-Native. It makes it easy to wrap common
+components and expose props that can be used to apply common styles with ease.
+
+## The Problem
+
+React-native does not provide an easy way to apply global styles throughout your application. Say we have a button
+that we are using throughout our app. We may set it up like this.
+
+```
+const styles = StyleSheet.create({
+  button: {
+    height: 100,
+    width: 50,
+    borderRadius: 20,
+    backgroundColor: 'red'
+  }
+})
+
+<TouchableOpacity style={styles.button}>
+  <Text>Button</Text>
+</TouchableOpacity>
+```
+
+Now of course we could push this stylesheet into a more global stylesheet that is imported throughout the app.
+This is ok but starts to look dirty when we are adding multiple styles to make up the button.
+
+```
+// styles.js
+const styles = StyleSheet.create({
+  button: {
+    height: 100,
+    width: 50
+  },
+  red: {
+    backgroundColor: 'red'
+  },
+  rounded: {
+    borderRadius: 20
+  }
+})
+
+export default styles;
+
+// component.js
+<TouchableOpacity style={[styles.button, styles.red, styles.rounded]}>
+  <Text>Button</Text>
+</TouchableOpacity>
+```
+
+## Working Solution
+
+Using the With Styles HOC we can combine all the possible button styles into a component.
+
+```
+// styles.js
+const styles = StyleSheet.create({
+  button: {
+    height: 100,
+    width: 50
+  },
+  red: {
+    backgroundColor: 'red'
+  },
+  rounded: {
+    borderRadius: 20
+  }
+})
+
+// button.js
+export default withStyles(TouchableOpacity, styles);
+
+// component.js
+<MyButton red rounded button>
+  <Text>Button</Text>
+</MyButton>
+```
+
+Using the With Spacing HOC we can add typical spacing utility props to a component.
+
+```
+// button.js
+export default withSpacing(TouchableOpacity);
+
+// component.js
+<MyButton mt={3} mb={3} p={20}>
+  <Text>Button</Text>
+</MyButton>
+```
