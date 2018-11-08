@@ -1,4 +1,4 @@
-import View from './View';
+import Block from './Block';
 
 // eslint-disable-next-line
-export { View };
+export { Block };

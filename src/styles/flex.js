@@ -1,40 +1,50 @@
 export default {
-  flexRow: {
+  row: {
     flexDirection: 'row',
   },
-  flexColumn: {
+  column: {
     flexDirection: 'column',
   },
-  flexItem: {
+  flex: {
     flex: 1,
   },
-  flexWrap: {
+  wrap: {
     flexWrap: 'wrap',
   },
   center: {
     alignItems: 'center',
     justifyContent: 'center',
   },
-  justifyCenter: {
-    justifyContent: 'center',
+  start: {
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
   },
-  spaceBetween: {
-    justifyContent: 'space-between',
-  },
-  flexEnd: {
-    alignItems: 'flex-end',
-  },
-  right: {
+  end: {
     alignItems: 'flex-end',
     justifyContent: 'flex-end',
   },
-  alignStart: {
-    alignSelf: 'flex-start',
+  justifyCenter: {
+    justifyContent: 'center',
+  },
+  justifyBetween: {
+    justifyContent: 'space-between',
   },
   alignEnd: {
-    alignSelf: 'flex-end',
+    alignItems: 'flex-end',
   },
   alignCenter: {
     alignItems: 'center',
+  },
+  alignStart: {
+    alignItems: 'flex-start',
+  },
+  alignSelfStart: {
+    alignSelf: 'flex-start',
+  },
+  alignSelfEnd: {
+    alignSelf: 'flex-end',
+  },
+  alignSelfCenter: {
+    alignSelf: 'center',
   },
 };

@@ -1,0 +1,49 @@
+---
+name: With Styles HOC
+---
+
+import { Playground, PropsTable } from 'docz';
+import { TouchableOpacity, Text, View } from 'react-native';
+import withStyles from './withStyles';
+import withSpacing from './withSpacing';
+import Block from '../components/Block';
+
+# With Styles HOC
+
+## Minimel Example
+
+Creating a button that exposes as many style props as you would like that can be reused with ease throughout your app.
+
+<Playground>
+  {() => {
+    const buttonStyles = {
+      tomato: {
+        backgroundColor: 'tomato',
+      },
+      purple: {
+        backgroundColor: 'purple',
+      },
+      grey: {
+        backgroundColor: 'grey',
+      },
+      rounded: {
+        borderRadius: 10,
+      },
+    };
+    const MyCustomButton = withSpacing(withStyles(View, buttonStyles));
+    return (
+      <Block flex row justifyBetween>
+        <MyCustomButton tomato rounded p={10} style={{ width: 200 }}>
+          <Text style={{ color: 'white', textAlign: 'center' }}>My Button</Text>
+        </MyCustomButton>
+        <MyCustomButton purple rounded p={10} style={{ width: 200 }}>
+          <Text style={{ color: 'white', textAlign: 'center' }}>My Button</Text>
+        </MyCustomButton>
+        <MyCustomButton grey p={10} style={{ width: 200 }}>
+          <Text style={{ color: 'white', textAlign: 'center' }}>My Button</Text>
+        </MyCustomButton>
+      </Block>
+    );
+}}
+
+</Playground>

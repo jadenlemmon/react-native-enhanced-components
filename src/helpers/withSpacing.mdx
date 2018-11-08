@@ -1,0 +1,25 @@
+---
+name: With Spacing HOC
+---
+
+import { Playground, PropsTable } from 'docz';
+import { TouchableOpacity, Text } from 'react-native';
+import withSpacing from './withSpacing';
+
+# With Spacing HOC
+
+## Minimel Example
+
+The With Styles HOC provides a spacing wrapper that can wrap any component and provide spacing utilility props.
+
+<Playground>
+  {() => {
+    const MyCustomButton = withSpacing(TouchableOpacity);
+    return (
+        <MyCustomButton p={50} style={{ backgroundColor: 'blue' }}>
+          <Text style={{ color: 'white', textAlign: 'center' }}>My Button</Text>
+        </MyCustomButton>
+    );
+}}
+
+</Playground>

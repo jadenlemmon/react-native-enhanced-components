@@ -1,11 +1,11 @@
 export default {
-  textCenter: {
-    textAlign: 'center',
-  },
-  textLeft: {
-    textAlign: 'center',
-  },
-  textRight: {
-    textAlign: 'right',
-  },
+    center: {
+        textAlign: 'center',
+    },
+    left: {
+        textAlign: 'left',
+    },
+    right: {
+        textAlign: 'right',
+    },
 };

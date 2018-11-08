@@ -1,13 +1,6 @@
-import { StyleSheet } from 'react-native';
+import utilityStyles from './utility';
+import spacingStyles from './spacing';
+import flexStyles from './flex';
+import textStyles from './text';
 
-import utility from './utility';
-import flex from './flex';
-import text from './text';
-
-const styles = StyleSheet.create({
-  ...utility,
-  ...flex,
-  ...text,
-});
-
-export default styles;
+export { utilityStyles, spacingStyles, flexStyles, textStyles };
