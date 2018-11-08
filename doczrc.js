@@ -6,4 +6,5 @@ export default {
   },
   plugins: [reactNative()],
   dest: '/docs',
+  base: '/react-native-enhanced-components/',
 };
